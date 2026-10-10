@@ -3,4 +3,6 @@ bin/
 *.class
 .settings/
 target/
-*.log
+*.log*.lck
+*.tmp
+.DS_Store
