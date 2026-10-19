@@ -29,9 +29,9 @@ public class BaseRecordAssembler<T extends BaseRecord> {
         T dto = supplier.get(); // Create a new instance of T using the supplier
         dto.id = m.getString("id");
         dto.version = m.getLong("version");
-//        dto.entityState = m.getString("entityState");
-//        dto.createdAt = m.getTimestamp("createdat").toLocalDateTime();
-//        dto.updatedAt = m.getTimestamp("updatedat").toLocalDateTime();
+        dto.entityState = m.getString("entityState");
+        dto.createdAt = m.getTimestamp("createdat").toLocalDateTime();
+        dto.updatedAt = m.getTimestamp("updatedat").toLocalDateTime();
         return dto;
     }
 
